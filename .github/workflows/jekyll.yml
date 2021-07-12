@@ -13,8 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
-      echo "github.event.pull_request.merged = {github.event.pull_request.merged}"
-      echo "github.event.pull_request.rebased = {github.event.pull_request.rebased}"
       run: |
         echo "github.event.pull_request.merged = {github.event.pull_request.merged}"
         echo "github.event.pull_request.rebased = {github.event.pull_request.rebased}"
