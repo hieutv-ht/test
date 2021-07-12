@@ -3,7 +3,7 @@ name: Jekyll site CI
 on:
   pull_request:
     branches: [ master ]
-    types: [ merged ]
+    types: [ merged, closed ]
 
 jobs:
   build:
