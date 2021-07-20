@@ -13,6 +13,8 @@ android {
         targetSdkVersion 30
         def tag = System.getenv('TAG').replace('v', '')
         def versions = tag.split('.').collect {it.isInteger() ? it.toInteger() : 0 }
+        println "HIEUTV   $tag"
+        println "HIEUTV $versions"
         versionCode versions[0] * 100000 + versions[1] * 1000 + versions[2] * 10 + versions[3]
         versionName "${versions[0]}.${versions[1]}.${versions[2]}"
 
