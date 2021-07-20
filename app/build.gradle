@@ -15,7 +15,7 @@ android {
         def versions = tag.split("\\.")
         println "HIEUTV   $tag"
         println "HIEUTV $versions"
-        versionCode versions[0] * 100000 + versions[1] * 1000 + versions[2] * 10 + versions[3]
+        versionCode versions[0].toInteger() * 100000 + versions[1].toInteger() * 1000 + versions[2].toInteger() * 10 + versions[3].toInteger()
         versionName "${versions[0]}.${versions[1]}.${versions[2]}"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
