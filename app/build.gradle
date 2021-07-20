@@ -7,6 +7,8 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    println "HIEUTV $RELEASE_VERSION"
+
     defaultConfig {
         applicationId "com.e.myapplication"
         minSdkVersion 21
