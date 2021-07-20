@@ -26,6 +26,7 @@ jobs:
     # The type of runner the job will run on
     name: Build And Deploy APK
     runs-on: ubuntu-latest
+    needs: [setup]
     # Steps represent the sequence of tasks using shell runners that will be executed as part of the Job
     steps:
       - uses: actions/checkout@v1
