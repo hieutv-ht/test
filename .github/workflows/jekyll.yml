@@ -6,9 +6,21 @@ jobs:
     name: Setup Env
     runs-on: ubuntu-latest
     steps:
-      - name: abc
+      - name: get secret
         env:
-          VERSION_CODE: ${{ env.VERSION_CODE }}
-        run: echo VERSION_CODE=${{ env.VERSION_CODE }}
+          VERSION_CODE: ${{ secret.VERSION_CODE }}
+        run: echo VERSION_CODE=$VERSION_CODE
+
+      - name: set secret 
+        uses: hmanzur/actions-set-secret@v2.0.0
+        env:
+          VERSION_CODE: ${{ secret.VERSION_CODE }}
+        with:
+          name: 'MY_SECRET_NAME'
+          value: $VERSION_CODE + 1
+          repository: 'my-org'
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          org: true
+          visibility: 'all'
 
   
