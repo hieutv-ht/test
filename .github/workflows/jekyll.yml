@@ -8,13 +8,13 @@ jobs:
     steps:
       - name: get secret
         env:
-          VERSION_CODE: ${{ secret.VERSION_CODE }}
+          VERSION_CODE: ${{ secrets.VERSION_CODE }}
         run: echo VERSION_CODE=$VERSION_CODE
 
       - name: set secret 
         uses: hmanzur/actions-set-secret@v2.0.0
         env:
-          VERSION_CODE: ${{ secret.VERSION_CODE }}
+          VERSION_CODE: ${{ secrets.VERSION_CODE }}
         with:
           name: 'MY_SECRET_NAME'
           value: $VERSION_CODE + 1
