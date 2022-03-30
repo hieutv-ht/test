@@ -9,4 +9,6 @@ jobs:
       - name: abc
         env:
           VERSION_CODE: ${{ secrets.VERSION_CODE }}
-        run: echo TEST $VERSION_CODE
+        run: echo VERSION_CODE=100 >> $GITHUB_ENV
+
+  
