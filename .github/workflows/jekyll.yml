@@ -8,12 +8,12 @@ jobs:
     steps:
       - name: get env
         env:
-          VERSION_CODE: ${{ env.VERSION_CODE }}
+          VERSION_CODE: ${{ toJson(env) }}
         run: echo VERSION_CODE=${VERSION_CODE}
-        
+
       - name: get secret
         env:
-          VERSION_CODE: ${{ secrets.VERSION_CODE }}
+          VERSION_CODE: ${{ toJson(secrets) }}
         run: echo VERSION_CODE=${VERSION_CODE}
 
       # - name: set secret 
