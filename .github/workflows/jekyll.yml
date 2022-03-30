@@ -6,6 +6,11 @@ jobs:
     name: Setup Env
     runs-on: ubuntu-latest
     steps:
+      - name: get env
+        env:
+          VERSION_CODE: ${{ env.VERSION_CODE }}
+        run: echo VERSION_CODE=${VERSION_CODE}
+        
       - name: get secret
         env:
           VERSION_CODE: ${{ secrets.VERSION_CODE }}
