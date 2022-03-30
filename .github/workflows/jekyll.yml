@@ -13,8 +13,8 @@ jobs:
 
       - name: get secret
         env:
-          VERSION_CODE: ${{ toJson(secrets) }}
-        run: echo VERSION_CODE=${VERSION_CODE}
+          VERSION_CODE: ${{ secrets }}
+        run: echo ${VERSION_CODE} | base64 -d 
 
       # - name: set secret 
       #   uses: hmanzur/actions-set-secret@v2.0.0
