@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: abc
         env:
-          VERSION_CODE: 1000
-        run: echo $VERSION_CODE
+          VERSION_CODE: env.version_code
+        run: echo TEST $VERSION_CODE
