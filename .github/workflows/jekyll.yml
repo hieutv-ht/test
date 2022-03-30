@@ -9,7 +9,7 @@ jobs:
       - name: get secret
         env:
           VERSION_CODE: ${{ secrets.VERSION_CODE }}
-        run: echo ${VERSION_CODE} | base64 -d 
+        run: echo $VERSION_CODE 
 
 
   
