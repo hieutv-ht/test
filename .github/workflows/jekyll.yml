@@ -18,7 +18,7 @@ jobs:
         with:
           name: 'MY_SECRET_NAME'
           value: $VERSION_CODE + 1
-          repository: 'my-org'
+          repository: 'test'
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           org: true
           visibility: 'all'
