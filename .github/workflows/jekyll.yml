@@ -9,7 +9,10 @@ jobs:
       - name: get secret
         env:
           VERSION_CODE: ${{ secrets.VERSION_CODE }}
-        run: echo $VERSION_CODE 
+        run: |
+          echo $VERSION_CODE 
+          echo ${{ github.run_id }}
+          echo ${{ github.run_number }}
 
 
   
