@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: abc
         env:
-          VERSION_CODE: ${{ secrets.VERSION_CODE }}
-        run: echo VERSION_CODE=100 >> $GITHUB_ENV
+          VERSION_CODE: ${{ env.VERSION_CODE }}
+        run: echo VERSION_CODE=${{ VERSION_CODE }}
 
   
