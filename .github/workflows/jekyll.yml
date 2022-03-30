@@ -9,6 +9,6 @@ jobs:
       - name: abc
         env:
           VERSION_CODE: ${{ env.VERSION_CODE }}
-        run: echo VERSION_CODE=${{ VERSION_CODE }}
+        run: echo VERSION_CODE=${{ env.VERSION_CODE }}
 
   
